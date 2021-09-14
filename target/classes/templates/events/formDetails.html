@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Cliente</title>
+</head>
+<body>
+    <h1>Serviços do cliente</h1>
+    <h3><a href="/consultClients">Lista de clientes</a></h3>
+    <div th:each="work : ${work}">
+        <div class="row">
+            <p> Serviço: <span th:text="${work.workName}"></span></p>
+            <p> Valor: <span th:text="${work.value}"></span></p>
+            <p> Data: <span th:text="${work.date}"></span></p>
+            <p> Indicação: <span th:text="${work.indication}"></span></p>
+            <p> Forma de pagamento: <span th:text="${work.payment}"></span></p>
+        </div><hr>
+    </div>
+</body>
+
+</html>
